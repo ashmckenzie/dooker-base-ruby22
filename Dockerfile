@@ -5,7 +5,7 @@ RUN apk --update add ruby ruby-dev
 RUN echo "gem: --no-document" > /etc/gemrc
 RUN gem install bundler
 
-ONBUILD ADD src/ /app/
+ONBUILD ADD . /app/
 WORKDIR /app
 ONBUILD RUN bundle install
 
